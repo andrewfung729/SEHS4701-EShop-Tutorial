@@ -11,6 +11,8 @@ src/main/java/eshop/model/shop_populate.sql
 
 ## URL
 
+Replace `${ContextPath}` with the context path of the application
+
 ```bash
-http://localhost:8080/eshop/shop
+http://localhost:8080/${ContextPath}/shop
 ```
