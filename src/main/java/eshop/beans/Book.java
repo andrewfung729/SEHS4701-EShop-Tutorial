@@ -1,6 +1,6 @@
 package eshop.beans;
 
-public class Book {
+public class Book extends Bean {
     private String author;
     private String id;
     private double price;
