@@ -16,14 +16,7 @@
     <servlet>
         <servlet-name>ShopServlet</servlet-name>
         <servlet-class>eshop.ShopServlet</servlet-class>
-        <init-param>
-            <param-name>base</param-name>
-            <param-value>/eshop/shop</param-value>
-        </init-param>
-        <init-param>
-            <param-name>imageURL</param-name>
-            <param-value>/eshop/images/</param-value>
-        </init-param>
+
         <init-param>
             <param-name>jdbcDriver</param-name>
             <param-value>com.mysql.cj.jdbc.Driver</param-value>

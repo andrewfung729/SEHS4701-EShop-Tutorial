@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpSession;
 
 import eshop.model.DataManager;
 
-@WebServlet(name = "ShopServlet", urlPatterns = {"/shop/*"})
+@WebServlet(name = "ShopServlet", urlPatterns = "/shop")
 public class ShopServlet extends HttpServlet implements jakarta.servlet.Servlet {
     private static final long serialVersionUID = 1L;
 
@@ -32,8 +32,8 @@ public class ShopServlet extends HttpServlet implements jakarta.servlet.Servlet 
         dataManager.setDbPassword(config.getInitParameter("dbPassword"));
 
         ServletContext context = config.getServletContext();
-        context.setAttribute("base", config.getInitParameter("base"));
-        context.setAttribute("imageURL", config.getInitParameter("imageURL"));
+        context.setAttribute("base", context.getContextPath() + AppConstants.BASE_URL);
+        context.setAttribute("imageURL", AppConstants.IMAGE_URL);
         context.setAttribute("dataManager", dataManager);
 
         try {  // load the database JDBC driver
