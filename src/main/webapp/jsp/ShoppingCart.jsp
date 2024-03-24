@@ -108,6 +108,7 @@
         </tr>
         <%
             }
+            totalPrice = Math.round(totalPrice * 100.) / 100.;
         %>
         <tr>
             <td colspan="5" id="total">Total: <%=totalPrice%>
